@@ -35,4 +35,10 @@ class ildev::python inherits ildev {
     require => Exec['ipython_profile_default'],
   }
 
+  # To debug nicely with sauna.reload
+  # See https://github.com/epeli/sauna.reload#debugging-with-saunareload
+  file { "${home}/.pdbrc":
+    source => "${files_dir}/.pdbrc",
+  }
+
 }
