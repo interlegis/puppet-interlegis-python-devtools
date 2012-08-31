@@ -1,8 +1,28 @@
 # Git and related tools
 class ildev::python inherits ildev {
 
-  package {'python-pip': }
-  package {'virtualenvwrapper': }
+  package { [
+             # basicos + portal modelo + plone 4
+             'build-essential',
+             'libbz2-dev',
+             'libfreetype6-dev',
+             'libjpeg62-dev',
+             'libreadline-gplv2-dev',
+             'libreadline6-dev',
+             'libssl-dev',
+             'libxml2-dev',
+             'libxslt1-dev',
+             'poppler-utils',
+             'python-dev',
+             'readline-common',
+             'wv',
+             'xpdf',
+             'zlib1g-dev',
+
+             # ferramentas
+             'python-pip', 'virtualenvwrapper',
+             ]:
+  }
 
   # IPython
   package { ['ipython', 'docutils']:
