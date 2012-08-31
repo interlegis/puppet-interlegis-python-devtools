@@ -27,16 +27,16 @@ class ildev::python inherits ildev {
     require => Exec['ipython_profile_zope2'],
   }
 
-  # virtualenv compat
-  #  maybe this should go into (almost) all the possible profiles
-  #  (at least those that do not use buildout)
+
+
+  # virtualenv compat  #  maybe this should go into (almost) all the possible profiles  #  (at least those that do not use buildout)
   file { "${home}/.config/ipython/profile_default/startup/virtualenv-for-ipython.py":
     source => "${files_dir}/virtualenv-for-ipython.py",
     require => Exec['ipython_profile_default'],
   }
 
   # To debug nicely with sauna.reload
-  # See https://github.com/epeli/sauna.reload#debugging-with-saunareload
+  # See https://github.com/collective/sauna.reload#debugging-with-saunareload
   file { "${home}/.pdbrc":
     source => "${files_dir}/.pdbrc",
   }
