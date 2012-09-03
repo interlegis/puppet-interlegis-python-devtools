@@ -34,9 +34,6 @@ class ildev::python inherits ildev {
     require => Package['ipython']
   }
 
-  $home = "/home/$user"
-  $files_dir = "$home/.config/puppet/modules/ildev/files"
-
   # IPython profile for Zope
   exec { 'ipython_profile_zope2':
     command => 'ipython profile create zope2',
