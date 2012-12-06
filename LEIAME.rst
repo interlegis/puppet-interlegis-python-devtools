@@ -9,6 +9,11 @@ Instalação
  ~/.config
     svn co http://repositorio.interlegis.leg.br/puppet/desktop_dev puppet
 
-- Execute o puppet como root (substitua <seu usuario> por seu usuario de sistema)::
+- Execute os seguintes comandos, trocando os valores das variáveis FACTER_* por seus dados::
 
-    sudo FACTER_user=<seu usuario> puppet apply ~/.config/puppet/manifests/site.pp --confdir=~/.config/puppet --verbose
+    sudo su
+    export FACTER_user=seu_usuario
+    export FACTER_fullname="Joao Seu Nome da Silva"
+    export FACTER_email=seu.email@interlegis.leg.br
+    puppet apply ~/.config/puppet/manifests/site.pp --confdir=~/.config/puppet --verbose
+    exit
