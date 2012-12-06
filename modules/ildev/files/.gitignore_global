@@ -35,3 +35,5 @@ nosetests.xml
 .pydevproject
 
 .sass-cache
+.ropeproject
+ipython_log.py
