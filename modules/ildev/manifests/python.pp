@@ -18,11 +18,14 @@ class ildev::python inherits ildev {
              'wv',
              'xpdf',
              'zlib1g-dev',
+             'python-tk',
 
              # ferramentas
              'python-pip', 'virtualenvwrapper',
              ]:
   }
+
+  # TODO apt-get build-dep python-ldap
 
   # IPython
   package { ['ipython', 'docutils']:
