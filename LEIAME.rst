@@ -5,8 +5,11 @@
 Instalação
 ==========
 
+- Instale o puppet::
+    sudo apt-get install puppet
+
 - Baixe este repositório na pasta ~/.config/puppet::
- ~/.config
+    cd ~/.config
     svn co http://repositorio.interlegis.leg.br/puppet/desktop_dev puppet
 
 - Execute os seguintes comandos, trocando os valores das variáveis FACTER_* por seus dados::
