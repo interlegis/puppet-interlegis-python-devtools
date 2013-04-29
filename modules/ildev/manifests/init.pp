@@ -1,7 +1,6 @@
 # Git and related tools
 class ildev {
 
-  $home = "/home/$user"
   $files_dir = "$home/.config/puppet/modules/ildev/files"
 
   Package { ensure => latest }
