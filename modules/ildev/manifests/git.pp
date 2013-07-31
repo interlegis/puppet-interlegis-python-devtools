@@ -6,7 +6,7 @@ class ildev::git inherits ildev {
   exec { ["git config --global color.ui true",
           "git config --global diff.tool meld",
           "git config --global merge.tool meld",
-          "git config --global core.excludesfile ~/.gitignore_global",
+          "git config --global core.excludesfile ~/.gitignore",
           "git config --global alias.st status",
           "git config --global alias.ci commit",
           "git config --global alias.co checkout",
@@ -17,8 +17,8 @@ class ildev::git inherits ildev {
     require => Package['git'],
   }
 
-  file { "${home}/.gitignore_global":
-    source => "${files_dir}/.gitignore_global",
+  file { "${home}/.gitignore":
+    source => "${files_dir}/.gitignore",
   }
 
 }
