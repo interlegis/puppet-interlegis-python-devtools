@@ -16,7 +16,7 @@ class ildev {
   ################ SASS ################
   package { 'rubygems': }
   package { ['sass', 'listen']:
-    provider => 'gem',
+    provider => 'gem',  # FIXME parece que nao esta funcionando atras do proxy
     require  => Package['rubygems'],
   }
 
