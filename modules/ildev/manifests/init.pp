@@ -12,6 +12,6 @@ class ildev {
  }
 
   # comuns
-  package { ['subversion', 'tree', 'xclip', ]: }
+  package { ['subversion', 'tree', 'xclip', 'curl',]: }
 
 }
