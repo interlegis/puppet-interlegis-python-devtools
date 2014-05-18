@@ -22,7 +22,7 @@ class ildev::python inherits ildev {
     command => 'ipython profile create zope2',
     require => Package['ipython']
   }
-  file { "${home}/.config/ipython/profile_zope2/startup/ipy_profile_zope.py":
+  file { "${home}/.ipython/profile_zope2/startup/ipy_profile_zope.py":
     source => "${files_dir}/ipy_profile_zope.py",
     require => Exec['ipython_profile_zope2'],
   }
@@ -31,7 +31,7 @@ class ildev::python inherits ildev {
   # VIRTUALENV
   # virtualenv compat
   #  maybe this should go into (almost) all the possible profiles  #  (at least those that do not use buildout)
-  file { "${home}/.config/ipython/profile_default/startup/virtualenv-for-ipython.py":
+  file { "${home}/.ipython/profile_default/startup/virtualenv-for-ipython.py":
     source => "${files_dir}/virtualenv-for-ipython.py",
     require => Exec['ipython_profile_default'],
   }
