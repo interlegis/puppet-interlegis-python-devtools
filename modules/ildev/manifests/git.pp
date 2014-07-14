@@ -19,6 +19,7 @@ class ildev::git inherits ildev {
 
   file { "${home}/.gitignore":
     source => "${files_dir}/.gitignore",
+    replace => no,
   }
 
 }
