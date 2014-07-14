@@ -3,14 +3,14 @@ class ildev::git inherits ildev {
 
   package { ['git', 'gitk', 'git-svn', 'meld']: }
 
-  exec { ["git config --system color.ui true",
-          "git config --system diff.tool meld",
-          "git config --system merge.tool meld",
-          "git config --system core.excludesfile ~/.gitignore",
-          "git config --system alias.st status",
-          "git config --system alias.ci commit",
-          "git config --system alias.co checkout",
-          "git config --system alias.df 'diff --color-words'",
+  exec { ["git config --global color.ui true",
+          "git config --global diff.tool meld",
+          "git config --global merge.tool meld",
+          "git config --global core.excludesfile ~/.gitignore",
+          "git config --global alias.st status",
+          "git config --global alias.ci commit",
+          "git config --global alias.co checkout",
+          "git config --global alias.df 'diff --color-words'",
           "git config --global user.name '$fullname'",
           "git config --global user.email '$email'",
           ]:
