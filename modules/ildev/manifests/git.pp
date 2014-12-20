@@ -13,6 +13,8 @@ class ildev::git inherits ildev {
           "git config --global alias.df 'diff --color-words'",
           "git config --global user.name '$fullname'",
           "git config --global user.email '$email'",
+          # explicitly adopt default push behaviour of git 2.0 and stop warning message
+          "git config --global push.default simple",
           ]:
     require => Package['git'],
   }
