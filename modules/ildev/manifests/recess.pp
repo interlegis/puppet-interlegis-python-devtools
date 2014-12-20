@@ -1,4 +1,3 @@
-# Git and related tools
 class ildev::recess inherits ildev {
 
   exec { "ppa_chris_lea_node":
