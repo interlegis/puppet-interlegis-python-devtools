@@ -10,7 +10,7 @@ Instalação
 
 - Baixe este repositório na pasta ~/.config/puppet::
     cd ~/.config
-    svn co http://repositorio.interlegis.leg.br/puppet/desktop_dev puppet
+    git clone git@github.com:interlegis/puppet-interlegis-python-devtools.git puppet
 
 - Execute os seguintes comandos, trocando os valores das variáveis FACTER_* por seus dados::
 
